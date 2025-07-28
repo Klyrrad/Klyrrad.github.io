@@ -1,11 +1,224 @@
-.page{width:80vw;height:80vh;border:1px solid red}
-nav ul li{display:inline;}
-#page1{background:red}
-#page2{background:green}
-#page3{background:blue}
+*{
+  box-sizing: border-box;
+}
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+
+    font-family: sans-serif;
+}
+
+/* width:80vw;height:80vh;  */
+.page{border:6px solid red; margin: auto;}
+nav ul li{padding:0; margin: 0;}
+#page1{background:white;}
+#page2{background:white;}
+#page3{background-color:black;}
+#page3 p, #page3 h1{color: white; text-align: center;}
+#page3 h1{font-size: 50px;}
+#page5{background:black}
+
+#page1 h1, #page2 h1, #page2 h2{color: black;}
+.page h1{text-align: center; font-size: 40px; font-weight: bold; color: white;}
+.page h2{text-align: center; color: white;}
+.page h1, .page h2{margin: 0; padding: 0;}
+
+/* nav{position: sticky; left: 25%; border: 4px solid red; background-color: black; top: 0;} */
+
+nav {
+  position: sticky;
+  
+  top: 0; /* required for sticky to work */
+  left: 25%;
+  /* border: 4px solid red; */
+  background-color: black;
+  border: none;
+
+  display: flex;
+  flex-direction: column;     /* stack children vertically */
+  justify-content: center;    /* center them vertically */
+  align-items: center;        /* center them horizontally*/
+
+  z-index: 2;
+
+  padding:0; margin: 0;
+}
+
+.playerGallery, .ballGuideContainer {
+  display: flex;
+  justify-content: center;  /* or space-between / space-around */
+  flex-wrap: wrap;          /* allows wrapping if screen is too small */
+  gap: 20px;                /* spacing between player containers */
+}
+
+.ballGuideContainer{
+  align-items: center;
+  max-width: 65%;
+
+  border: solid 5px black;
+  border-radius: 25px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.ballGuideContainer h2 {flex: 100%; text-align: center; }
+
+.timeline-container {max-width: 1100px; margin: 10px auto; animation: fadeIn 1s;}
+.timeline-container .row {display: grid; grid-template-columns: 1fr 3px 1fr; 
+                          grid-column-gap: 20px; padding: 0px 20px;}
+
+.row .line {position: relative; background-color: black;}
+
+.contents time {position: relative; display: inline-block; padding: 5px 12px; 
+                margin-bottom: 20px; background-color: black; color: white;}
+
+.contents time::before {position: absolute; content: ""; width: 20px; height: 3px;
+                        background-color: black; right: 100%; top:50%; transform: translateY(-50%);}
+
+.contents .description {position: relative; background-color: white; padding: 5px 10px;
+                        border: 5px solid black; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+                        }
+
+.description h3 {margin-bottom: 10px;}
+
+/* .description {display: grid; grid-template-columns: 1fr 2fr; grid-column-gap: 10px;}
+.images {grid-column: 1; border: solid 3px black}
+.words {grid-column: 2/ -1;} */
+.row .empty-col {grid-area: empty_column;}
+.row .line {grid-area: the_line;}
+.row .contents {grid-area: the_contents; padding: 10px 0px;}
+.row:nth-child(odd){grid-template-areas: 'empty_column the_line the_contents';}
+.row:nth-child(even){grid-template-areas: 'the_contents the_line empty_column'; text-align: right;}
+.row:nth-child(even) time::before {right:initial; left: 100%;}
+.row:nth-child(even) .description{text-align: left;}
+.row .line .circle {content: ""; position: absolute; width: 17px; height:17px; background-color: white;
+                    border: 3px solid black; border-radius: 50%; left:50%; transform: translateX(-50%);}
+.row .line .start {top: 0;}
+.row .line .end {bottom: 0;}
+.row:nth-child(even) .description,.row:nth-child(even) time, 
+.row:nth-child(odd) .description, .row:nth-child(odd) time{transition: none; opacity: 0;}
+
+/* .row:nth-child(odd) .show{animation: contentFadeInOdd 1s forwards;}
+.row:nth-child(even) .show{animation: contentFadeInEven 1s forwards;} */
+
+.playerContainer{display:inline-block; text-align: center;
+                 position: relative; margin: 20px; padding: 5px;}
+
+.playerContainer img{max-width: 250px; height: auto; border-radius: 25px; display: block; z-index: 0; position: static;}
+
+.playerInfo {position: absolute; bottom: 0; left: 0; top: 0; right: 0; 
+             width: 100%; padding: 8px 0; background: black; color: white; 
+             text-align: center; font-weight: bold;
+             transition: opacity 0.3s; opacity: 0%;}
+
+.playerInfo:hover{opacity: 70%;}
+.playerInfo ul{list-style: none; padding: 0}
+
+#page3 section {place-items: center; align-content: center;}
+.page h1 , .page h2{animation: fadeInOpacity 1s;}
+
+@keyframes contentFadeInOdd
+{
+  from {opacity: 0; transform: translateX(150px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes contentFadeInEven
+{
+  from {opacity: 0; transform: translateX(-150px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeInOpacity
+{
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+.hidden { opacity: 0; transform: translateY(20px); transition: all 1s;}
+.show {opacity: 1; transform: translateY(0);}
+
+nav img{ height: 50px; animation: ballCycle 3s infinite;}
+/* filter: invert(100%); */
+
+/*to unhide menu items*/
+.menuShow{display:block;}
+
+.button{background: black; border: none; color: white; padding: 15px 32px; text-align: center;
+        text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer;
+        border-radius: 5px;}
+
+.navHover{background-color: black; transition: background-color 0.5s ease;
+          position: relative; background: none; border: none; color: white; font-weight: bold;
+          font-size: 20px; padding: 10 20px; cursor: pointer;}
+
+.navHover:hover{background-color: white; color: black;}
+
+.navHover::after{content:""; position: absolute; bottom: 0; left: 0; 
+                 height: 2px; width: 0; background-color: red; transition: width 0.3s ease;}
+
+.navHover:hover::after{width: 0%;}
+.navHover.active::after{width: 10%;}
+
+@keyframes ballCycle
+{
+  0%{filter: invert(0%);}
+  50%{filter: invert(100%);}
+  100%{filter: invert(0%);}
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply the animation to target elements */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0; /* Ensures it's hidden initially */
+}
+
+footer {text-align: center; color: white; background-color: black; z-index: 2;}
 
 @media (max-width: 800px)
 {
-    
+    /*make a menu items vertical*/
+    nav ul li{display:block; margin-bottom: 10px;}
+    /* unhide menu icon */
+    #hamIcon{display:block;}
+    /*hide the menu item list*/
+    nav ul{display:none;}
+
+    .playerContainer img{align-items: center;}
+
+    .row:nth-child(odd), .row:nth-child(even) {grid-template-columns: 3px 1fr; 
+    grid-template-areas: 'the_line the_contents'; text-align: left;}
+    .row:nth-child(even) time::before {left: initial; right: 100%;}
+    .row .empty-col{display: none;}
+
+    .row:nth-child(odd) .description ,.row:nth-child(odd) time, .row:nth-child(even) .description ,.row:nth-child(even) time
+    {transform: translateX(150px); transition: all 0.5s; opacity: 0;}
+
+    .row:nth-child(odd) .show, .row:nth-child(even) .show{transform: translateX(0px); opacity: 1;}
+}
+
+@media (min-width: 801px)
+{
+    #hamIcon{display: none;}
+    ul.centerButtons{display: flex; justify-content: center;} 
+    ul.centerButtons li {margin: 0 10px;}
+
+    .description {display: grid; grid-template-columns: 1fr 2fr; grid-column-gap: 10px;}
+    .images {grid-column: 1; border: solid 3px black}
+    .words {grid-column: 2/ -1;}
+
+    .row:nth-child(odd) .show{animation: contentFadeInOdd 1s forwards;}
+    .row:nth-child(even) .show{animation: contentFadeInEven 1s forwards;}
+
+
 }
