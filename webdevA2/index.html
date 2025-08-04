@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Standard favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- PNG icons for modern browsers -->
+        <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" href="Image/apple-touch-icon.png">
+        <!-- Manifest (references Android Chrome PNGs) -->
+        <link rel="manifest" href="site.webmanifest">
+
+    <title>Bowling</title>
+</head>
+<body>
+    <nav > <!--menu system-->
+        <div class="nav-background"></div>
+
+        <button class="button navHover" id="hamIcon"><b>Open Menu</b></button>
+        <ul class="centerButtons">
+            <li><button class="button navHover" id="page1btn"><b>History Of Bowling</b></button></li>
+            <li><button class="button navHover" id="page2btn"><b>Bowling Ball Guide</b></button></li>
+            <li><a href="#" id="page5btn"><img src="Images/BowlingIcon.png" alt="Ball"></a></li>
+            <li><button class="button navHover" id="page3btn"><b>Professional Players</b></button></li>
+            <li><button class="button navHover" id="page4btn"><b>Oiling Patterns Guide</b></button></li>
+        </ul>
+    </nav>
+    
+    <main id="pagecontainer">
+        <section class="page" id="page1">
+        <header><h1>History Of Bowling</h1></header>
+
+            <div class="timeline-container">
+
+                <!-- First Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"><span class="circle start"></span></div>
+                    <section class="contents">
+                        <span class="time">5200 B.C.</span>
+                        <div class="description">
+                            <div class="images">
+                            <img src="Images/HistoryBowling5200BC.jpg" alt="" id="history5200BC">
+                            </div>
+
+                            <div class="words">
+                            <h3>The beginning of bowling</h3>
+                            <p>
+                               Bowling has been traced to articles found in tomb of an Egyptian child
+                               buried. Where primitive implements included nine piece of stone at which
+                               a stone "ball" was rolled, the ball having first to roll through an archway
+                               made of three pieces of marble. 
+                            </p>
+                            </div>
+                </div>
+                    </section>
+                </div>
+
+                <!-- Second Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">Unknown</span>
+                        <div class="description">
+                            <div class="images">
+                            <img src="Images/Ulumaika.jpg" alt="" id="uluMaika">
+                            </div>
+
+                            <div class="words">
+                            <h3>Ancient Polynesia</h3>
+                            <p>
+                               Polynesians play ula maika, a stone-rolling game involving pin-like
+                               targets 60 feet away-an early ancestor of modern tenpin Bowling.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        
+                <!-- Third Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">200-400 A.D.</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Ancient Germany</h3>
+                            <p>
+                               Bowling used a religious ritual. People rolled stones at clubs
+                               ("kegels") to cleanse themselves of sin. Martin Luther later
+                               codifies the game with nine pins, promoting it for recreation.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Fourth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1300s-1500s</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Europe</h3>
+                            <p>
+                               Bowling spreads across England, the Netherlands, and Scandinavia.
+                               Various forms arise - lawn bowling, skittles, and ninepins.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            
+                <!-- Fifth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1600s</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>England & Colonies</h3>
+                            <p>
+                               Bowling is common in England. It's brought to the American colonies 
+                               by European settlers. Ninepins became the dominant form in the U.S.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sixth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1841</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Ninepin banned from some U.S. States</h3>
+                            <p>
+                               Ninepin bowling is outlawed in states like Connecticut due to 
+                               its association with gambling. Tenpin bowling was then borned by
+                               adding one extra pin to circumvent the law.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Seventh Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1875</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>National Bowling Association (USA)</h3>
+                            <p>
+                               First national attempt to unify rules, formed by clubs in New York.
+                               Short-lived due to disputes over regulations.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Eighth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1895</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>American Bowling Congress (ABC) Established</h3>
+                            <p>
+                               Standardizes rules, equipment, and lane dimensions. 
+                               First organized governing body for men's bowling in the U.S.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Nineth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1901</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>First ABC National Championship Tournament</h3>
+                            <p>
+                               Held in Chicago, the tournament becomes an annual tradition and
+                               the most prestigous in U.S. Bowling.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Tenth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1916</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Women's International Bowling Congress (WIBC) Formed</h3>
+                            <p>
+                               After early women's leagues and tournaments, WIBC is established
+                               to govern women's competitive bowling.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Eleventh Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">20th Century (1930s-1950s)</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Technological Advances</h3>
+                            <p>
+                               Introduction of automatic pinsetters, synthetic lanes, and standardized
+                               scoring to revolutionize the game. That is where bowling became a 
+                               mainstream recreational activity across the U.S.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Twelveth Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"></div>
+                    <section class="contents">
+                        <span class="time">1950s-1970s</span>
+                        <div class="description">
+
+                            <div class="words">
+                            <h3>Bowling Boom</h3>
+                            <p>
+                               Explodes in popularity with the rise of televised tournaments and
+                               the Professional Bowlers Association (PBA) was founded in 1958.
+                               Bowling alleys become widespread social centers.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Last Content -->
+                <div class="row">
+                    <div class="empty-col"></div>
+                    <div class="line"><span class="circle end"></span></div>
+                    <section class="contents">
+                        <span class="time">2005-Current</span>
+                        <div class="description">
+                            <div class="images">
+                            <img src="Images/USBC.jpg" alt="" id="USBCImage">
+                            </div>
+
+                            <div class="words">
+                            <h3>Formation of United States Bowling Congress (USBC)</h3>
+                            <p>
+                               ABC, WIBC, and other groups merge into USBC, 
+                               the national governing body for both amateur 
+                               and competitive bowling in the U.S.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Type of Bowling  -->
+            <div class="bowlingType">
+                <div class="bowlingType-title">
+                    <h1>Types of Bowling</h1>
+                </div>
+
+                <div class="bowlingType-nav p" id="typeBowlingprev">
+                    <img src="Images/LeftArrow.png" alt="Left Arrow">
+                </div>
+
+                <div class="bowlingType-image">
+                    <img id="typeBowlingpic" src="Images/TenPin-Bowling.png" alt="">
+                </div>
+
+                <button id="audioTypeBowling">Listen</button>
+
+                <div class="bowlingType-content">
+                    <h2 id="typebowlingHeader">Ten Pin Bowling</h2>
+                    <p id = "typebowlingDescription">Ten-pin bowling is a type of bowling in which a bowler rolls a bowling ball down a wood or synthetic 
+                    lane toward ten pins positioned evenly in four rows in an equilateral triangle. 
+                    The objective is to knock down all ten pins on the first roll of the ball a strike, or failing that, on the second roll a spare.</p>
+                </div>
+
+                <div class="bowlingType-nav n" id="typeBowlingnext">
+                    <img src="Images/RightArrow.png" alt="Right Arrow">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="page" id="page2">
+            <header>
+                <h1>Bowling Ball Guide</h1>
+            </header>
+
+            <!-- Type of Bowling Core  -->
+            <div class="bowlingType">
+
+                <div class="bowlingType-title"><h1>Bowling Ball Cores</h1></div>
+                <div class="bowlingType-nav p" id="coreNavprev">
+                    <img src="Images/LeftArrow.png" alt="Left Arrow">
+                </div>
+
+                <div class="bowlingType-image">
+                    <img id="typeCorePic" src="Images/Symmetrical.jpg" alt="Bowling Ball Core">
+                </div>
+
+                <div class="bowlingType-content">
+                    <h2 id="typeCoreHeader">Symmetrical</h2>
+                    <p id = "typeCoreDescription">A symmetrical core in a bowling ball refers to a core with a uniform shape, 
+                    where the mass is distributed equally around the ball's center. 
+                    This results in a predictable and consistent ball motion down the lane, 
+                    making it ideal for bowlers seeking control and repeatability.
+                    </p>
+                </div>
+
+                <div class="bowlingType-nav n" id="coreNavnext">
+                    <img src="Images/RightArrow.png" alt="Right Arrow">
+                </div>
+            </div>
+
+            <!-- Type of Bowling Coverstock  -->
+            <div class="bowlingType">
+
+                <div class="bowlingType-title"><h1>Bowling Ball CoverStock</h1></div>
+                <div class="bowlingType-nav p" id="coverNavprev">
+                    <img src="Images/LeftArrow.png" alt="Left Arrow">
+                </div>
+
+                <div class="bowlingType-image">
+                    <img id="typeCoverStockPic" src="Images/SolidCoverStock.png" alt="">
+                </div>
+
+                <div class="bowlingType-content">
+                    <h2 id="typeCoverStockHeader">Solid CoverStock</h2>
+                    <p id = "typeCoverStockDescription">
+                        Solid coverstocks are characterized by their matte finish, devoid of any glossy sheen (unless polished). 
+                        These coverstocks provide maximum traction on the lane surface, generating significant friction for an 
+                        early and strong hook motion. The lack of polish creates a higher friction coefficient, allowing the ball 
+                        to grip the lane surface more aggressively, especially in heavy oil conditions. Solid coverstocks excel in 
+                        providing a smooth and predictable arc, making them suitable for bowlers who prefer a controlled motion with 
+                        a strong mid-lane read. They are particularly effective on fresh oil patterns where a consistent hook is crucial 
+                        for performance.
+                    </p>
+                </div>
+
+                <div class="bowlingType-nav n" id="coverNavnext">
+                    <img src="Images/RightArrow.png" alt="Right Arrow"> 
+                </div>
+            </div>
+
+            <!-- Type of Bowling Ball Numbers  -->
+            <div class="bowlingType">
+
+                <div class="bowlingType-title"><h1>Bowling Ball Numbers</h1></div>
+                <div class="bowlingType-nav p" id="numberNavprev">
+                    <img src="Images/LeftArrow.png" alt="Left Arrow">
+                </div>
+
+                <div class="bowlingType-image">
+                    <img id="typeNumberPic" src="Images/RG.jpg" alt="">
+                </div>
+
+                <div class="bowlingType-content">
+                    <h2 id="typeNumberHeader">Radius Of Gyration</h2>
+                    <p id = "typeNumberDescription">
+                        The RG (Radius of Gyration) number of a ball indicates how readily it will roll or hook. 
+                        Lower RG numbers (e.g., 2.46-2.51) mean the ball will roll earlier and potentially hook sooner, 
+                        while higher RG numbers (e.g., 2.57-2.80) indicate the ball will roll later and potentially hook 
+                        further down the lane. 
+                    </p>
+                </div>
+
+                <div class="bowlingType-nav n" id="numberNavnext">
+                    <img src="Images/RightArrow.png" alt="Right Arrow">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="page" id="page3">
+
+            <header><h1>Local Players</h1></header>
+            <div class="playerGallery hidden">
+
+            <article class="fade-in">
+                <div class="playerContainer">
+                <img src="Images/Darren_Ong.jpg" alt="Darren Bowler">
+
+                    <div class="playerInfo">
+                        <h2>Darren Ong</h2>
+
+                        <p>
+                            Age: 29
+                            <br>
+                            Handness: Right
+                        </p>
+
+                        <h3>Notable Achievements</h3>
+                        <ul>
+                            <li>2025 PBA Viper Champion</li>
+                            <li>2023 IBF World Championship - Singles Gold</li>
+                            <li>Singapore Sports Awards - Sportsman of the Year 2024</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fade-in">
+                <div class="playerContainer">
+                <img src="Images/Timothy_Tham.jpg" alt="Timothy Bowler">
+
+                    <div class="playerInfo">
+                        <h2>Timothy Tham</h2>
+
+                        <p>
+                            Age: 27
+                            <br>
+                            Handness: Right
+                        </p>
+
+                        <h3>Notable Achievements</h3>
+                        <ul>
+                            <li>2015 Singapore Nationals Men's Open Champion</li>
+                            <li>2017 SEA Games - Men's Team Gold</li>
+                            <li>2023 Asian Bowling Championships - Men's Doubles Gold</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fade-in">
+                <div class="playerContainer">
+                <img src="Images/John_Faragalla.jpg" alt="John Bowler">
+
+                    <div class="playerInfo">
+                        <h2>John Faragalla</h2>
+
+                        <p>
+                            Age: 20
+                            <br>
+                            Handness: Right
+                        </p>
+
+                        <h3>Notable Achievements</h3>
+                        <ul>
+                            <li>2023 Singapore Nationals Men's Open Champion</li>
+                            <li>2023 Asian Junior Championship - Doubles Gold</li>
+                            <li>2023 Asian Junior Championship - Team Gold</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="fade-in">
+                <div class="playerContainer">
+                <img src="Images/Shayna_Ng.jpg" alt="Shayna Bowler">
+
+                    <div class="playerInfo">
+                        <h2>Shayna Ng</h2>
+
+                        <p>
+                            Age: 36
+                            <br>
+                            Handness: Right
+                        </p>
+
+                        <h3>Notable Achievements</h3>
+                        <ul>
+                            <li>PWBA 2019 Sonoma County Open Champion</li>
+                            <li>2021 IBF World Bowling Championship - Singles Gold</li>
+                            <li>2023 IBF World Bowling Championship - Team Bronze</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            </div>
+
+            <header><h1>International Players</h1></header>
+            <div class="playerGallery hidden">
+
+                <article class="fade-in">
+                    <div class="playerContainer">
+                    <img src="Images/EJ_Tackett.jpg" alt="EJ Bowler">
+                        <div class="playerInfo">
+                            <h2>EJ Tackett</h2>
+
+                            <p>
+                                Age: 32
+                                <br>
+                                Handness: Right
+                                <br>
+                                Country: USA
+                            </p>
+
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>2023, 2025 US Open Champion</li>
+                                <li>2016, 2024 PBA World Champion</li>
+                                <li>2017 PBA Tournament of Champions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fade-in">
+                    <div class="playerContainer">
+                    <img src="Images/Chris_Barnes.jpg" alt="Chris Bowler">
+                    
+                        <div class="playerInfo">
+                            <h2>Chris Barnes</h2>
+
+                            <p>
+                                Age: 55
+                                <br>
+                                Handness: Right
+                                <br>
+                                Country: USA
+                            </p>
+
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>2005 US Open Champion</li>
+                                <li>2006 Tournament of Champions</li>
+                                <li>2011 PBA World Champion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fade-in">
+                    <div class="playerContainer">
+                    <img src="Images/Jesper_Svensson.jpg" alt="Jesper Bowler">
+                        <div class="playerInfo">
+                            <h2>Jesper Svensson</h2>
+
+                            <p>
+                                Age: 30
+                                <br>
+                                Handness: Right
+                                <br>
+                                Country: Sweden
+                            </p>
+
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>2020 PBA Indianapolis Open Champion</li>
+                                <li>2016, 2025 Tournament of Champions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fade-in">
+                    <div class="playerContainer">
+                    <img src="Images/BJ_Moore.jpg" alt="BJ Bowler">
+                        <div class="playerInfo">
+                            <h2>BJ Moore</h2>
+
+                            <p>
+                                Age: 36
+                                <br>
+                                Handness: Right
+                                <br>
+                                Country: USA
+                            </p>
+
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>2019 PBA Wilmington Open Champion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="page" id="page4">
+            <header>
+                <h1>Key Elements of Oiling Patterns</h1>
+            </header>
+
+            <div class="oilingPattern">
+                <img src="Images/OilingPattern.jpg" alt="Pattern 1" class="patternDisplay">
+                <img src="Images/OilingPattern2.jpg" alt="Pattern 2" class="patternDisplay">
+                <img src="Images/OilingPattern3.jpg" alt="Pattern 3" class="patternDisplay">
+            </div>
+            
+            <div class="bowlingType">
+                <div class="bowlingType-title"></div>
+
+                <div class="bowlingType-nav p" id="oilingNavprev">
+                    <img src="Images/LeftArrow.png" alt="Left Arrow">
+                </div>
+
+                <div class="bowlingType-image">
+                    <img src="Images/UnderstandingPattern.jpg" alt="Oiling Pattern Guide">
+                </div>
+
+                <div class="bowlingType-content">
+                    <h2 id="oilingHeader">Length</h2>
+                    <p id="oilingDescription">
+                        Refers to the distance of the oil applied on the lane, 
+                        and it significantly impacts a bowler's strategy and ball selection. 
+                        Shorter patterns (e.g., 35 feet or less) cause the ball to hook earlier, 
+                        while longer patterns (e.g., 43 feet or more) allow the ball to slide 
+                        farther before hooking. Adjusting speed, ball choice, and line are crucial 
+                        for success on different lengths
+                    </p>
+                </div>
+
+                <div class="bowlingType-nav n" id="oilingNavnext">
+                    <img src="Images/RightArrow.png" alt="Right Arrow">
+                </div>
+            </div>
+
+             <!-- Rule of 31  -->
+            <div class="bowlingType">
+                <div class="bowlingType-title"></div>
+
+                <div class="bowlingType-image">
+                    <img src="Images/Rule31.png" alt="">
+                </div>
+
+                <div class="bowlingType-content">
+                    <h2>Rule of 31</h2>
+                    <p>
+                        The "Rule of 31" in bowling is a guideline for estimating the breakpoint of the bowling
+                        ball on a given oil pattern. Suggests that you subtract 31 from the length of the oil
+                        pattern to determine the approximate board where the ball should exit the pattern.
+                        <br><br>
+                        For example, on a 45 foot pattern, the breakpoint would be 14 board (45 - 31 = 14). This
+                        rule is a starting point and doesn't account for lane surface or individual bowler 
+                        characteristics.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="page" id="page5">
+        <header><h1>Game & Quiz</h1></header>
+
+            <section id="gameContent">
+                <h2>Test your Ability</h2>
+
+                <div id="gameContainer">
+                    <div class="gameTimer">Time Left: <span id="gameTime">30</span>s</div>
+                    <h2 id="scoreBox">Score:</h2>
+                    <img id="pinIdGame" src="Images/pinMiniGame.png" alt="Pin MiniGame">
+
+                    <div id="gameInstruction">Hit the pin as many times as you can before time runs out</div>   
+
+                    <button class="startGame">Start</button>
+                </div>
+
+            </section>
+
+            <section id="quizContent">
+                <h2>Test your Knowledge</h2>
+                
+                <div id="quizContainer">
+                    <div class="questionQuiz"></div>
+                    <div class="optionsQuiz"></div>
+                    <div class="resultQuiz">Quiz Finish! You Score: <span id="score">0</span></div>
+                    <button class="restart-btn">Restart</button>
+                </div>
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <img src="Images/MobileQR.png" alt="QR Code" id="qrCode">
+        Lab 02, Kwek Lee Tao Darryl, 244560J</footer>
+</body>
+</html>
